@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+
+<body>
+    <nav class="sticky">
+        <a href="#" class="logo">SM</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+        <a href="#">Cases</a>
+        <a href="#">Services</a>
+        <a href="#">Podcast</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a class="signup_btn" href="#">Sign Up</a>
+        <a href="#">Insights</a>
+    </div>
+        
+          <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+          </div>           
+    </nav>
+
+    <section class="sec-1">
+        <h1>Interactive Navigation Menu With a Fixed Position</h1>
+    </section>
+
+    <section class="sec-2">
+        <h2>The Latest Data Confirms: Forest Fires Are Getting Worse</h2>
+        <br>
+        <p>The latest data on forest fires confirms what we've long feared: Forest fires are becoming more widespread, burning at least twice as much tree cover today as they did two decades ago.
+
+            Using data from researchers at the University of Maryland, recently updated to cover the years 2001 to 2023, we calculated that the area burned by forest fires increased by about 5.4% per year over that time period. Forest fires now result in nearly 6 million more hectares of tree cover loss per year than they did in 2001 — an area roughly the size of Croatia</p>
+
+            <p>Fire is also making up a larger share of global tree cover loss compared to other drivers like mining and forestry. While fires only accounted for about 20% of all tree cover loss in 2001, they now account for roughly 33%.</p>
+
+            <img class="fire_img" src="global-forest-fire.gif" alt="image">
+    </section>
+
+    <script>
+        //js for nav effect
+        window.addEventListener('scroll' , function(){
+            var nav = document.querySelector("nav");
+            nav.classList.toggle('sticky' , window.scrollY>0)
+        });
+
+        //js for responsive navigation sidebar
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click" , ()=>{
+            menu.classList.add('active');
+        });
+
+        closeBtn.addEventListener("click" , ()=>{
+            menu.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

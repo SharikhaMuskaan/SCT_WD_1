@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+ nav{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 100px;
+    transition: 0.8s;
+}
+
+ nav .logo{
+    color:white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-size: 20px;
+    font-style: italic;
+}
+
+nav .menu{
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+nav .menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 20px;
+    padding: 0 10px;
+    border-radius: 5pc;
+    transition: 0.3s;
+    transition-property: color , background;    
+}
+
+nav .menu a:hover{
+    border:2px solid white;
+    background-color: black;
+    color: aliceblue;
+    
+}
+
+nav .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.sec-1{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg_img.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+h1{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.fire_img{
+    height: 100%;
+    width: 100%;
+}
+
+.sec-2 h2{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 50px;
+    font-weight: 600;
+     margin: 30px 0;
+}
+
+.sec-2{
+    min-height: 100vh;
+    background: #001018;
+    padding: 20px 100px;
+}
+
+.sec-2 p{
+    color: rgba(255, 255, 255);
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+
+nav.sticky{
+    background: rgb(27, 25, 20,0.7);
+    padding: 10px 100px;
+}
+
+@media screen and (max-width:1060px){
+    nav .btn{
+        display: block;
+    }
+
+    nav .menu{
+        position: fixed;
+        background: rgb(27, 25, 20);
+         flex-direction: column;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        left:100%;
+        padding: 80px 10px;
+        transition: 0.5s;
+        transition-property: left; 
+    } 
+
+    nav .menu.active{
+        left: 0;
+       
+    }
+
+     nav .menu .close-btn{
+        position: absolute;
+        top:0;
+        left:0;
+        margin: 25px;
+    } 
+
+    nav .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+    } 
+}
+
+ @media screen and (max-width:630px){
+    .sec-1 h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+} 
+
+.signup_btn{
+    border: 2px solid orange;
+    border-radius: 5pc;
+}
+
+nav>a:hover{
+    color:black;
+    background-color: orange;
+    border: 2px solid black;
+    border-radius: 5pc;
+}
